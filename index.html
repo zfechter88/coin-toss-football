@@ -1,25 +1,191 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Random Tester</title>
+    <title>Coin Toss Football</title>
+    <link rel="stylesheet" href="/src/styles.css" />
   </head>
 
+  <!-- ////////intro page////////////// -->
   <body>
-    <div class="title">
-      <h1>Coin Toss Football</h1>
+    <div id='intro'>
+    <h1>Coin Toss Football</h1>
+    <h3>Where every game...is a flip of the coin...</h2>
+    <p>Pick your team. Play full seasons and playoffs. How many Super Bowls can you win?</p> 
+    <h2>Pick your team to begin</h2>
+
+    <div id='pickTeam'>
+      
+      <div id='afc'>
+      <ul>
+        <h3>AFC East</h3>
+        <li id="Bills">Bills</li>
+        <li id="Patriots">Patriots</li>
+        <li id="Dolphins">Dolphins</li>
+        <li id="Jets">Jets</li>
+      </ul>
+      <ul>
+        <h3>AFC North</h3>
+        <li id="Bengals">Bengals</li>
+        <li id="Steelers">Steelers</li>
+        <li id="Browns">Browns</li>
+        <li id="Ravens">Ravens</li>
+      </ul>
+      <ul>
+          <h3>AFC South</h3>
+          <li id="Titans">Titans</li>
+          <li id="Colts">Colts</li>
+          <li id="Texans">Texans</li>
+          <li id="Jaguars">Jaguars</li>
+        </ul>
+      <ul>
+          <h3>AFC West</h3>
+          <li id="Chiefs">Chiefs</li>
+          <li id="Raiders">Raiders</li>
+          <li id="Chargers">Chargers</li>
+          <li id="Broncos">Broncos</li>
+      </ul>
+      </div>
+      <div id='nfc'>
+          <ul>
+              <h3>NFC East</h3>
+              <li id="Cowboys">Cowboys</li>
+              <li id="Eagles">Eagles</li>
+              <li id="Commanders">Commanders</li>
+              <li id="Giants">Giants</li>
+            </ul>
+            <ul>
+                <h3>NFC North</h3>
+                <li id="Packers">Packers</li>
+                <li id="Vikings">Vikings</li>
+                <li id="Bears">Bears</li>
+                <li id="Lions">Lions</li>
+              </ul>
+              <ul>
+                  <h3>NFC South</h3>
+                  <li id="Buccaneers">Buccaneers</li>
+                  <li id="Saints">Saints</li>
+                  <li id="Falcons">Falcons</li>
+                  <li id="Panthers">Panthers</li>
+                </ul>
+                <ul>
+                    <h3>NFC West</h3>
+                    <li id="Rams">Rams</li>
+                    <li id="Cardinals">Cardinals</li>
+                    <li id="49ers">49ers</li>
+                    <li id="Seahawks">Seahawks</li>
+                  </ul>
+      </div>
     </div>
-    <div id="text">
-      <p>Click here to play</p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
+    <h3 id='myTeam1'></h3>
+      <a id='begin'>Begin Career</a>
+  </div>
+
+
+
+  <!-- ////////regular season page////////////// -->
+<div id='game'>
+  
+    <h1 id="title">Coin Toss Football</h1>
+    <div id='header'>
+      <h3 id='year'>Year</h3>
+    <h3 id='superBowlCity'><h3>
     </div>
-    <div>
-      <button id="reset">
-        Reset
-      </button>
-    </div>
+    <h2 id="myTeam2">My team in the game</h2>
+    
+    <h3 id='careerOverAlert'><h3>
+    <h3 id='whatACareer'>30 years! What a career! Click here to see final career stats.<h3> 
+
+    <div id="careerOver">
+        
+          <h2>Final Career Stats:</h3>
+        <h4 id='careerWinsFinal'>Career Wins:</h4>
+        <h4 id='careerLossesFinal'>Career Losses:</h4>
+        <h4 id='playoffWinsFinal'>Playoff Wins:</h4>
+        <h4 id='playoffLossesFinal'>Playoff Losses:</h4>
+        <h4 id='superBowlWinsFinal'>Super Bowl Wins:</h4>
+        <h4 id='superBowlLossesFinal'>Super Bowl Losses:</h4>
+        <h4 id='confChampWinsFinal'>Conference Championship Wins:</h4>
+        <h4 id= 'confChampLossesFinal'>Conference Championship Losses:</h4>
+        <h4 id='divWinsFinal'>Divisional Round Wins:</h4>
+        <h4 id='divLossesFinal'>Divisional Round Losses:</h4>
+        <h4 id='wcWinsFinal'>Wild Card Round Wins:</h4>
+        <h4 id='wcLossesFinal'>Wild Card Round Losses:</h4>
+        <h4 id='newCareer'>Click to start a new career</h4>
+   </div>
+
+    <div id="season-summary">
+      <p id="playWeek"></p>
+      <p id='restartButton'></p>
+      </div>
+
+      
+
+
+      <div id="text">
+          <p id="resultWeek17"></p>
+          <p id="resultWeek16"></p> 
+          <p id="resultWeek15"></p> 
+          <p id="resultWeek14"></p>
+          <p id="resultWeek13"></p>
+          <p id="resultWeek12"></p>
+          <p id="resultWeek11"></p> 
+          <p id="resultWeek10"></p>
+          <p id="resultWeek9"></p>
+          <p id="resultWeek8"></p>
+          <p id="resultWeek7"></p>
+          <p id="resultWeek6"></p> 
+          <p id="resultWeek5"></p>
+          <p id="resultWeek4"></p>
+          <p id="resultWeek3"></p>
+          <p id="resultWeek2"></p>
+          <p id="resultWeek1"></p>
+        </div>
+        
+        
+        <div id='playoffs'>
+          <p id='resultSB'>Super Bowl</p>
+          <p id='resultConfChamp'>Conference Championship</p>
+          <p id='resultDivis'>Divisional Round</p>
+          <p id='resultWC'>Wild Card Round</p>
+        </div>
+      
+        <div id='historyPage'>
+          
+
+        </div>
+      <div id='statsButton'>
+          <h3 id="showStats">Click to see career stats</h3>
+          <h3 id="hideStats">Click to hide career stats</h3>
+      </div>
+
+      <div>
+        <p id='retireButton'></p>
+      </div>
+
+      <div id="stats">
+
+      
+        
+        <h3>Career Stats</h3>
+        <h4 id='careerWins'>Career Wins:</h4>
+        <h4 id='careerLosses'>Career Losses:</h4>
+        <h4 id='playoffWins'>Playoff Wins:</h4>
+        <h4 id='playoffLosses'>Playoff Losses:</h4>
+        <h4 id='superBowlWins'>Super Bowl Wins:</h4>
+        <h4 id='superBowlLosses'>Super Bowl Losses:</h4>
+        <h4 id='confChampWins'>Conference Championship Wins:</h4>
+        <h4 id= 'confChampLosses'>Conference Championship Losses:</h4>
+        <h4 id='divWins'>Divisional Round Wins:</h4>
+        <h4 id='divLosses'>Divisional Round Losses:</h4>
+        <h4 id='wcWins'>Wild Card Round Wins:</h4>
+        <h4 id='wcLosses'>Wild Card Round Losses:</h4>
+      </div>
+</div>
+<br>
+<br>
+<br>
+<a id='contactPage' href='/src/contact.html'>Click for contact page</a>
+
+    <script src="/src/index.js" defer></script>
   </body>
-  <script src="/src/index.js" defer></script>
 </html>

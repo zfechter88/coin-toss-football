@@ -1,3 +1,116 @@
 body {
-  font-family: sans-serif;
+  font-family: monospace;
+  background-color: #1e90ff;
+  height: 3000px;
+}
+
+.title:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+#playWeek {
+  border: 1px solid black;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#restartButton {
+  border: 1px solid black;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#newCareer {
+  border: 1px solid black;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#whatACareer {
+  border: 1px solid black;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#whatACareer:hover {
+  background-color: darksalmon;
+}
+
+#newCareer:hover {
+  background-color: darksalmon;
+}
+
+#restartButton:hover {
+  background-color: darksalmon;
+}
+
+#playWeek:hover {
+  background-color: darksalmon;
+}
+
+#playWeek:active {
+  background-color: green;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  border: 1px solid black;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+a {
+  border: 1px solid black;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  background-color: darksalmon;
+}
+
+li:hover {
+  background-color: darksalmon;
+}
+
+#pickTeam {
+  display: flex;
+}
+
+#afc {
+}
+
+#nfc {
+  flex: 1;
+}
+
+#contactPage:hover {
+  background-color: darksalmon;
+}
+
+#contactPage {
+  border: 1px solid black;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  padding-top: 10px;
 }
