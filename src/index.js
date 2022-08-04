@@ -41,6 +41,542 @@ let seahawks = document.getElementById("Seahawks");
 
 //////////////////////////////////////////////////////////
 
+/////////////team objects///////////
+let NFL = [];
+
+let NFLConferences = [];
+
+let AFC = [];
+let NFC = [];
+
+let AFCE = {
+  name: "AFCE",
+  teams: []
+};
+let AFCN = {
+  name: "AFCN",
+  teams: []
+};
+let AFCS = {
+  name: "AFCS",
+  teams: []
+};
+let AFCW = {
+  name: "AFCW",
+  teams: []
+};
+let NFCE = {
+  name: "NFCE",
+  teams: []
+};
+let NFCN = {
+  name: "NFCN",
+  teams: []
+};
+let NFCS = {
+  name: "NFCS",
+  teams: []
+};
+let NFCW = {
+  name: "NFCW",
+  teams: []
+};
+
+let Bills = {
+  name: "Bills",
+  conference: AFC,
+  division: AFCE,
+  roadOpp: "@ Bills",
+  homeOpp: "vs. Bills"
+};
+
+let Patriots = {
+  name: "Patriots",
+  conference: AFC,
+  division: AFCE,
+  roadOpp: "@ Patriots",
+  homeOpp: "vs. Patriots"
+};
+
+let Dolphins = {
+  name: "Dolphins",
+  conference: AFC,
+  division: AFCE,
+  roadOpp: "@ Dolphins",
+  homeOpp: "vs. Dolphins"
+};
+
+let Jets = {
+  name: "Jets",
+  conference: AFC,
+  division: AFCE,
+  roadOpp: "@ Jets",
+  homeOpp: "vs. Jets"
+};
+
+let Bengals = {
+  name: "Bengals",
+  conference: AFC,
+  division: AFCN,
+  roadOpp: "@ Bengals",
+  homeOpp: "vs. Bengals"
+};
+
+let Steelers = {
+  name: "Steelers",
+  conference: AFC,
+  division: AFCN,
+  roadOpp: "@ Steelers",
+  homeOpp: "vs. Steelers"
+};
+
+let Browns = {
+  name: "Browns",
+  conference: AFC,
+  division: AFCN,
+  roadOpp: "@ Browns",
+  homeOpp: "vs. Browns"
+};
+
+let Ravens = {
+  name: "Ravens",
+  conference: AFC,
+  division: AFCN,
+  roadOpp: "@ Ravens",
+  homeOpp: "vs. Ravens"
+};
+
+let Titans = {
+  name: "Titans",
+  conference: AFC,
+  division: AFCS,
+  roadOpp: "@ Titans",
+  homeOpp: "vs. Titans"
+};
+
+let Colts = {
+  name: "Colts",
+  conference: AFC,
+  division: AFCS,
+  roadOpp: "@ Colts",
+  homeOpp: "vs. Colts"
+};
+
+let Texans = {
+  name: "Texans",
+  conference: AFC,
+  division: AFCS,
+  roadOpp: "@ Texans",
+  homeOpp: "vs. Texans"
+};
+
+let Jaguars = {
+  name: "Jaguars",
+  conference: AFC,
+  division: AFCS,
+  roadOpp: "@ Jaguars",
+  homeOpp: "vs. Jaguars"
+};
+
+let Chiefs = {
+  name: "Chiefs",
+  conference: AFC,
+  division: AFCW,
+  roadOpp: "@ Chiefs",
+  homeOpp: "vs. Chiefs"
+};
+
+let Raiders = {
+  name: "Raiders",
+  conference: AFC,
+  division: AFCW,
+  roadOpp: "@ Raiders",
+  homeOpp: "vs. Raiders"
+};
+
+let Chargers = {
+  name: "Chargers",
+  conference: AFC,
+  division: AFCW,
+  roadOpp: "@ Chargers",
+  homeOpp: "vs. Chargers"
+};
+
+let Broncos = {
+  name: "Broncos",
+  conference: AFC,
+  division: AFCW,
+  roadOpp: "@ Broncos",
+  homeOpp: "vs. Broncos"
+};
+
+let Cowboys = {
+  name: "Cowboys",
+  conference: NFC,
+  division: NFCE,
+  roadOpp: "@ Cowboys",
+  homeOpp: "vs. Cowboys"
+};
+
+let Eagles = {
+  name: "Eagles",
+  conference: NFC,
+  division: NFCE,
+  roadOpp: "@ Eagles",
+  homeOpp: "vs. Eagles"
+};
+
+let Commanders = {
+  name: "Commanders",
+  conference: NFC,
+  division: NFCE,
+  roadOpp: "@ Commanders",
+  homeOpp: "vs. Commanders"
+};
+
+let Giants = {
+  name: "Giants",
+  conference: NFC,
+  division: NFCE,
+  roadOpp: "@ Giants",
+  homeOpp: "vs. Giants"
+};
+
+let Packers = {
+  name: "Packers",
+  conference: NFC,
+  division: NFCN,
+  roadOpp: "@ Packers",
+  homeOpp: "vs. Packers"
+};
+
+let Vikings = {
+  name: "Vikings",
+  conference: NFC,
+  division: NFCN,
+  roadOpp: "@ Vikings",
+  homeOpp: "vs. Vikings"
+};
+
+let Bears = {
+  name: "Bears",
+  conference: NFC,
+  division: NFCN,
+  roadOpp: "@ Bears",
+  homeOpp: "vs. Bears"
+};
+
+let Lions = {
+  name: "Lions",
+  conference: NFC,
+  division: NFCN,
+  roadOpp: "@ Lions",
+  homeOpp: "vs. Lions"
+};
+
+let Buccaneers = {
+  name: "Buccaneers",
+  conference: NFC,
+  division: NFCS,
+  roadOpp: "@ Buccaneers",
+  homeOpp: "vs. Buccaneers"
+};
+
+let Saints = {
+  name: "Saints",
+  conference: NFC,
+  division: NFCS,
+  roadOpp: "@ Saints",
+  homeOpp: "vs. Saints"
+};
+
+let Falcons = {
+  name: "Falcons",
+  conference: NFC,
+  division: NFCS,
+  roadOpp: "@ Falcons",
+  homeOpp: "vs. Falcons"
+};
+
+let Panthers = {
+  name: "Panthers",
+  conference: NFC,
+  division: NFCS,
+  roadOpp: "@ Panthers",
+  homeOpp: "vs. Panthers"
+};
+
+let Rams = {
+  name: "Rams",
+  conference: NFC,
+  division: NFCW,
+  roadOpp: "@ Rams",
+  homeOpp: "vs. Rams"
+};
+
+let Cardinals = {
+  name: "Cardinals",
+  conference: NFC,
+  division: NFCW,
+  roadOpp: "@ Cardinals",
+  homeOpp: "vs. Cardinals"
+};
+
+let FortyNiners = {
+  name: "FortyNiners",
+  conference: NFC,
+  division: NFCW,
+  roadOpp: "@ FortyNiners",
+  homeOpp: "vs. FortyNiners"
+};
+
+let Seahawks = {
+  name: "Seahawks",
+  conference: NFC,
+  division: NFCW,
+  roadOpp: "@ Seahawks",
+  homeOpp: "vs. Seahawks"
+};
+
+NFL.push(
+  Bills,
+  Dolphins,
+  Jets,
+  Patriots,
+  Bengals,
+  Steelers,
+  Browns,
+  Ravens,
+  Titans,
+  Jaguars,
+  Colts,
+  Texans,
+  Chiefs,
+  Raiders,
+  Chargers,
+  Broncos,
+  Cowboys,
+  Eagles,
+  Commanders,
+  Giants,
+  Packers,
+  Vikings,
+  Bears,
+  Lions,
+  Buccaneers,
+  Falcons,
+  Saints,
+  Panthers,
+  Rams,
+  Cardinals,
+  Seahawks,
+  FortyNiners
+);
+
+NFLConferences.push(AFC, NFC);
+let AFCTEAMS = [];
+let NFCTEAMS = [];
+AFCTEAMS.push(
+  Bills,
+  Dolphins,
+  Jets,
+  Patriots,
+  Bengals,
+  Steelers,
+  Browns,
+  Ravens,
+  Titans,
+  Jaguars,
+  Colts,
+  Texans,
+  Chiefs,
+  Raiders,
+  Chargers,
+  Broncos
+);
+
+NFCTEAMS.push(
+  Cowboys,
+  Eagles,
+  Commanders,
+  Giants,
+  Packers,
+  Vikings,
+  Bears,
+  Lions,
+  Buccaneers,
+  Falcons,
+  Saints,
+  Panthers,
+  Rams,
+  Cardinals,
+  Seahawks,
+  FortyNiners
+);
+
+AFC.push(AFCE, AFCN, AFCS, AFCW);
+NFC.push(NFCE, NFCN, NFCS, NFCW);
+
+AFCE.teams.push(Bills, Dolphins, Jets, Patriots);
+AFCN.teams.push(Bengals, Steelers, Browns, Ravens);
+AFCS.teams.push(Titans, Jaguars, Colts, Texans);
+AFCW.teams.push(Chiefs, Raiders, Chargers, Broncos);
+NFCE.teams.push(Cowboys, Eagles, Commanders, Giants);
+NFCN.teams.push(Packers, Vikings, Bears, Lions);
+NFCS.teams.push(Buccaneers, Falcons, Saints, Panthers);
+NFCW.teams.push(Rams, Cardinals, Seahawks, FortyNiners);
+
+//////////////////////////////////////////////////
+
+//////////create schedule////////////
+let myTeamObject;
+
+let mySchedule = [];
+
+function shuffle(array) {
+  let currentIndex = array.length,
+    randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex]
+    ];
+  }
+
+  return array;
+}
+
+let scoreButton = document.getElementById("scoreTest");
+
+let schedule = document.getElementById("schedule");
+let genWeek = 1;
+let eachElement;
+
+function generateSchedule() {
+  playWeekButton.style.display = "block";
+  scoreButton.style.display = "none";
+  while (schedule.firstChild) {
+    schedule.removeChild(schedule.firstChild);
+  }
+  if (mySchedule.length > 1) {
+    mySchedule = [];
+  }
+
+  let myTeam = myTeamObject;
+  let myDivision = myTeam.division;
+
+  /////determine 6 conference opponents////////
+  let divisionOpponents = myDivision.teams.filter(
+    (team) => team.name !== myTeam.name
+  );
+
+  divisionOpponents.forEach((team) => mySchedule.push(team.roadOpp));
+  divisionOpponents.forEach((team) => mySchedule.push(team.homeOpp));
+  ////////////////////////////////////////
+
+  ///4 games against a division from in coference//////////
+  let availableConfDivisions = myTeam.conference.filter(
+    (division) => division !== myTeam.division
+  );
+
+  let divPicker1 = Math.round(Math.random() * 2);
+  availableConfDivisions = availableConfDivisions[divPicker1];
+  shuffle(availableConfDivisions.teams);
+  mySchedule.push(availableConfDivisions.teams[0].roadOpp);
+  mySchedule.push(availableConfDivisions.teams[1].roadOpp);
+  mySchedule.push(availableConfDivisions.teams[0].homeOpp);
+  mySchedule.push(availableConfDivisions.teams[1].homeOpp);
+
+  ////////////////////////////////////////////////////////
+
+  ///4 games against a division out conference///////////
+  let availableNonConfDivisions = NFLConferences.filter(
+    (conference) => conference !== myTeam.conference
+  );
+
+  let divPicker2 = Math.round(Math.random() * 3);
+  availableNonConfDivisions = availableNonConfDivisions[0][divPicker2];
+
+  shuffle(availableNonConfDivisions.teams);
+  mySchedule.push(availableNonConfDivisions.teams[0].roadOpp);
+  mySchedule.push(availableNonConfDivisions.teams[1].roadOpp);
+  mySchedule.push(availableNonConfDivisions.teams[0].homeOpp);
+  mySchedule.push(availableNonConfDivisions.teams[1].homeOpp);
+
+  /////////////////////////////////
+
+  /////////2 games against teams from the two remaining division in conf////
+  let available2ConfDivisions = myTeam.conference.filter(
+    (division) =>
+      division !== myTeam.division && division !== availableConfDivisions
+  );
+  available2ConfDivisions = available2ConfDivisions.map((div) => div.teams);
+
+  shuffle(available2ConfDivisions);
+  const divx1 = available2ConfDivisions[0];
+  const divx2 = available2ConfDivisions[1];
+  shuffle(divx1);
+  shuffle(divx2);
+  mySchedule.push(divx1[0].roadOpp);
+  mySchedule.push(divx2[0].homeOpp);
+  ///////////////////////////////////////////////
+
+  //////1 non conference opponent from other division//////
+  let available3NonConfDivisions = NFLConferences.filter(
+    (conference) => conference !== myTeam.conference
+  );
+
+  available3NonConfDivisions = available3NonConfDivisions[0].filter(
+    (division) => division.name !== availableNonConfDivisions.name
+  );
+
+  available3NonConfDivisions = available3NonConfDivisions.map(
+    (division) => division.teams
+  );
+  shuffle(available3NonConfDivisions);
+
+  available3NonConfDivisions = available3NonConfDivisions[0];
+
+  shuffle(available3NonConfDivisions); //array of 4 teams in division
+  let randPick2 = Math.round(Math.random());
+  if (randPick2 === 0) {
+    mySchedule.push(available3NonConfDivisions[0].roadOpp);
+  } else if (randPick2 === 1) {
+    mySchedule.push(available3NonConfDivisions[0].homeOpp);
+  }
+
+  available3NonConfDivisions.slice(0);
+  shuffle(available3NonConfDivisions);
+
+  ///////////////////////////////////////////
+
+  shuffle(mySchedule);
+  mySchedule.forEach((element) => {
+    const week = document.createElement("p");
+    const textnode = document.createTextNode(
+      "Week: " + genWeek + " " + element
+    );
+    week.appendChild(textnode);
+    document.getElementById("schedule").appendChild(week);
+    week.setAttribute("id", "week " + genWeek);
+    genWeek++;
+    if (genWeek === 18) {
+      genWeek = 1;
+    }
+  });
+}
+
+scoreButton.addEventListener("click", generateSchedule);
+
+///////////////////////////////////////////
+
 let intro = document.getElementById("intro");
 let begin = document.getElementById("begin");
 let gameDisplay = document.getElementById("game");
@@ -69,7 +605,17 @@ function myteam(event) {
   myTeam1.innerHTML = event.target.innerHTML;
   myTeam2.innerHTML = event.target.innerHTML;
   chosenTeam = event.target.innerHTML;
+
+  function setTeam(team) {
+    if (team.name === event.target.innerHTML) {
+      myTeamObject = team;
+    }
+  }
+
+  NFL.forEach(setTeam);
+
   begin.style.display = "block";
+  scoreButton.style.display = "block";
 }
 
 begin.addEventListener("click", hideIntro);
@@ -134,371 +680,576 @@ let divisionalRound = false;
 let championshipRound = false;
 let superBowl = false;
 
+///////generate score///////
+
+let highScores = [38, 45, 48, 49, 56, 63];
+let mediumScores = [17, 20, 21, 24, 27, 28, 30, 35];
+let lowScores = [0, 3, 6, 7, 10, 13, 14];
+let myScore = null;
+let oppScore = null;
+
+function getmyScore() {
+  let randNum = Math.floor(Math.random() * 100);
+  if (randNum < 15) {
+    randNum = Math.floor(Math.random() * 6);
+    myScore = lowScores[randNum];
+  } else if (randNum > 15 && randNum < 75) {
+    randNum = Math.floor(Math.random() * 8);
+    myScore = mediumScores[randNum];
+  } else if (randNum > 75) {
+    randNum = Math.floor(Math.random() * 5);
+    myScore = highScores[randNum];
+  }
+}
+
+function getoppScore() {
+  let randNum = Math.floor(Math.random() * 100);
+  if (randNum < 15) {
+    randNum = Math.floor(Math.random() * 6);
+    oppScore = lowScores[randNum];
+  } else if (randNum > 15 && randNum < 75) {
+    randNum = Math.floor(Math.random() * 8);
+    oppScore = mediumScores[randNum];
+  } else if (randNum > 75) {
+    randNum = Math.floor(Math.random() * 5);
+    oppScore = highScores[randNum];
+  }
+}
+
+function decideWinner() {
+  getmyScore();
+  getoppScore();
+  if (myScore > oppScore) {
+    document.getElementById("week " + genWeek).innerHTML =
+      "Week:  " +
+      genWeek +
+      " Winner " +
+      mySchedule[genWeek - 1] +
+      " " +
+      myScore +
+      " " +
+      "-" +
+      " " +
+      oppScore;
+    genWeek++;
+  } else if (oppScore > myScore) {
+    document.getElementById("week " + genWeek).innerHTML =
+      "Week:  " +
+      genWeek +
+      " Loser " +
+      mySchedule[genWeek - 1] +
+      " " +
+      myScore +
+      " " +
+      "-" +
+      " " +
+      oppScore;
+    genWeek++;
+  } else if (oppScore === myScore) {
+    decideWinner();
+  }
+}
+
+function decidePlayoffWinner() {
+  if (wildCardRound && wins <= 11) {
+    if (myScore > oppScore) {
+      document.getElementById("wcRoundOpponent").innerHTML =
+        "Wild Card Round: Winner " +
+        wcOpponent.roadOpp +
+        myScore +
+        " " +
+        oppScore;
+    } else if (oppScore > myScore) {
+      document.getElementById("wcRoundOpponent").innerHTML =
+        "Wild Card Round: Loser " +
+        wcOpponent.roadOpp +
+        myScore +
+        " " +
+        oppScore;
+    }
+  } else if (wildCardRound && wins > 11) {
+    if (myScore > oppScore) {
+      document.getElementById("wcRoundOpponent").innerHTML =
+        "Wild Card Round: Winner " +
+        wcOpponent.homeOpp +
+        myScore +
+        " " +
+        oppScore;
+    } else if (oppScore > myScore) {
+      document.getElementById("wcRoundOpponent").innerHTML =
+        "Wild Card Round: Loser " +
+        wcOpponent.homeOpp +
+        myScore +
+        " " +
+        oppScore;
+    }
+  } else if (divisionalRound && wins <= 13) {
+    if (myScore > oppScore) {
+      document.getElementById("divRoundOpponent").innerHTML =
+        "Divisional Round: Winner " +
+        divOpponent.roadOpp +
+        myScore +
+        " " +
+        oppScore;
+    } else if (oppScore > myScore) {
+      document.getElementById("divRoundOpponent").innerHTML =
+        "Divisional Round: Loser " +
+        divOpponent.roadOpp +
+        myScore +
+        " " +
+        oppScore;
+    }
+  } else if (divisionalRound && wins > 13) {
+    if (myScore > oppScore) {
+      document.getElementById("divRoundOpponent").innerHTML =
+        "Divisional Round: Winner " +
+        divOpponent.homeOpp +
+        myScore +
+        " " +
+        oppScore;
+    } else if (oppScore > myScore) {
+      document.getElementById("divRoundOpponent").innerHTML =
+        "Divisional Round: Loser " +
+        divOpponent.homeOpp +
+        myScore +
+        " " +
+        oppScore;
+    }
+  }
+}
+//////////////////////////////
+let wcOpponent;
+let divOpponent;
+let champOpponent;
+let sbOpponent;
+function getPlayoffs() {
+  let myTeam = myTeamObject;
+  let wcOpponents = [];
+  let divOpponents = [];
+  let champOpponents = [];
+  let sbOpponents = [];
+
+  if (myTeam.conference === AFC) {
+    wcOpponents = AFCTEAMS;
+  } else if (myTeam.conference === NFC) {
+    wcOpponents = NFCTEAMS;
+  }
+
+  wcOpponents = wcOpponents.filter((team) => team.name !== myTeam.name);
+  shuffle(wcOpponents);
+  divOpponents = wcOpponents.filter(
+    (team) => team.name !== wcOpponents[0].name
+  );
+  shuffle(divOpponents);
+  champOpponents = divOpponents.filter(
+    (team) => team.name !== divOpponents[0].name
+  );
+  shuffle(champOpponents);
+
+  if (wildCardRound && wins <= 11) {
+    wcOpponent = wcOpponents[0];
+    playWeekButton.innerHTML =
+      "You made the playoffs! You are playing on the road against the " +
+      wcOpponent.name +
+      " in the Wild Card Round! Click to advance!";
+    const week = document.createElement("p");
+    const textnode = document.createTextNode(
+      "Wild Card Round: " + wcOpponent.roadOpp
+    );
+    week.id = "wcRoundOpponent";
+    week.appendChild(textnode);
+    document.getElementById("schedule").prepend(week);
+  } else if (wildCardRound && wins > 11) {
+    wcOpponent = wcOpponents[0];
+    playWeekButton.innerHTML =
+      "You made the playoffs! You are playing at home against the " +
+      wcOpponent.name +
+      " in the Wild Card Round! Click to advance!";
+    const week = document.createElement("p");
+    const textnode = document.createTextNode(
+      "Wild Card Round: " + wcOpponent.homeOpp
+    );
+    week.id = "wcRoundOpponent";
+    week.appendChild(textnode);
+    document.getElementById("schedule").prepend(week);
+  } else if (divisionalRound && wins <= 13) {
+    divOpponent = divOpponents[0];
+    playWeekButton.innerHTML = "Play Divisional Round";
+    const week = document.createElement("p");
+    const textnode = document.createTextNode(
+      "Divisonal Round: " + divOpponent.roadOpp
+    );
+    week.id = "divRoundOpponent";
+    week.appendChild(textnode);
+    document.getElementById("schedule").prepend(week);
+  } else if (divisionalRound && wins > 13) {
+    divOpponent = divOpponents[0];
+    playWeekButton.innerHTML = "Play Divisional Round";
+    const week = document.createElement("p");
+    const textnode = document.createTextNode(
+      "Divisonal Round: " + divOpponent.homeOpp
+    );
+    week.id = "divRoundOpponent";
+    week.appendChild(textnode);
+    document.getElementById("schedule").prepend(week);
+  } else if (championshipRound && wins <= 13) {
+    champOpponent = champOpponents[0];
+    playWeekButton.innerHTML = "Play Conference Championship";
+    const week = document.createElement("p");
+    const textnode = document.createTextNode(
+      "Conference Championship: " + champOpponent.roadOpp
+    );
+    week.id = "champOpponent";
+    week.appendChild(textnode);
+    document.getElementById("schedule").prepend(week);
+  } else if (championshipRound && wins > 13) {
+    champOpponent = champOpponents[0];
+    playWeekButton.innerHTML = "Play Conference Championship";
+    const week = document.createElement("p");
+    const textnode = document.createTextNode(
+      "Conference Championship: " + champOpponent.homeOpp
+    );
+    week.id = "champOpponent";
+    week.appendChild(textnode);
+    document.getElementById("schedule").prepend(week);
+  } else if (superBowl) {
+  }
+}
+
 //////////////logic for each game////////////
 
 function weekOneResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins = 1;
     displayLosses = 0;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek1.innerHTML = "Week 1: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     addLosses();
     displayWins = 0;
     displayLosses = 1;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek1.innerHTML = "Week 1: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekTwoResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek2.innerHTML = "Week 2: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     addLosses();
     displayLosses++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek2.innerHTML = "Week 2: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekThreeResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek3.innerHTML = "Week 3: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     addLosses();
     displayLosses++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek3.innerHTML = "Week 3: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekFourResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek4.innerHTML = "Week 4: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     addLosses();
     displayLosses++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek4.innerHTML = "Week 4: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekFiveResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek5.innerHTML = "Week 5: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     addLosses();
     displayLosses++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek5.innerHTML = "Week 5: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekSixResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek6.innerHTML = "Week 6: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     addLosses();
     displayLosses++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek6.innerHTML = "Week 6: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekSevenResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek7.innerHTML = "Week 7: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     addLosses();
     displayLosses++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek7.innerHTML = "Week 7: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekEightResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek8.innerHTML = "Week 8: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     displayLosses++;
     addLosses();
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek8.innerHTML = "Week 8: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekNineResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek9.innerHTML = "Week 9: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     displayLosses++;
     addLosses();
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek9.innerHTML = "Week 9: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekTenResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek10.innerHTML =
-      "Week 10: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     displayLosses++;
     addLosses();
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek10.innerHTML =
-      "Week 10: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekElevenResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek11.innerHTML =
-      "Week 11: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     displayLosses++;
     addLosses();
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek11.innerHTML =
-      "Week 11: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekTwelveResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek12.innerHTML =
-      "Week 12: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     displayLosses++;
     addLosses();
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek12.innerHTML =
-      "Week 12: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekThirteenResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek13.innerHTML =
-      "Week 13: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     displayLosses++;
     addLosses();
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek13.innerHTML =
-      "Week 13: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekFourteenResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek14.innerHTML =
-      "Week 14: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     displayLosses++;
     addLosses();
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek14.innerHTML =
-      "Week 14: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekFifteenResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek15.innerHTML =
-      "Week 15: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     displayLosses++;
     addLosses();
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek15.innerHTML =
-      "Week 15: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekSixteenResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek16.innerHTML =
-      "Week 16: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     displayLosses++;
     addLosses();
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek16.innerHTML =
-      "Week 16: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function weekSeventeenResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  decideWinner();
+
+  if (myScore > oppScore) {
     wins++;
     addWins();
     displayWins++;
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek17.innerHTML =
-      "Week 17: W" + " " + wins + " " + "-" + " " + losses;
-  } else {
+  } else if (oppScore > myScore) {
     losses++;
     displayLosses++;
     addLosses();
     myTeam2.innerHTML =
       chosenTeam + " " + displayWins + " " + "-" + " " + displayLosses;
-    resultWeek17.innerHTML =
-      "Week 17: L" + " " + wins + " " + "-" + " " + losses;
   }
 }
 
 function wildCardResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
-    resultWC.innerHTML = "Wild Card Winner!";
-    playWeekButton.innerHTML = "Play Divisional Round!";
-    addWins();
+  decidePlayoffWinner();
+  if (myScore > oppScore) {
     divisionalRound = true;
     wildCardRound = false;
+    getPlayoffs();
+    playWeekButton.innerHTML =
+      "You have won the Wild Card Round! You are playing in the Divisional Round. Click to advance.";
+    addWins();
   } else {
     addLosses();
     wildCardRound = false;
     endSeason = true;
-    resultWC.innerHTML = "Wild Card Loser.";
+
     playWeekButton.style.display = "none";
     startNewSeasonButton.style.display = "block";
+    startNewSeasonButton.innerHTML =
+      "You have lost in the Wild Card Round. Click to start the next season.";
     seasonSnip = "Lost Wild Card Round";
   }
 }
 
 function divisionalRoundResult() {
-  randNum = Math.floor(Math.random() * 100);
-  if (randNum > 50) {
+  getPlayoffs();
+  if (myScore > oppScore) {
     resultDivis.innerHTML = "Divisional Round Winner!";
     playWeekButton.innerHTML = "Play Conference Championship!";
     addWins();
@@ -558,103 +1309,105 @@ function superBowlResult() {
 ////////logic when play game is clicked/////////
 
 function playWeek() {
+    console.log(count);
   if (count === 1) {
     weekOneResult();
-    resultWeek1.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 2";
     count++;
   } else if (count === 2) {
     weekTwoResult();
-    resultWeek2.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 3";
     count++;
   } else if (count === 3) {
     weekThreeResult();
-    resultWeek3.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 4";
     count++;
   } else if (count === 4) {
     weekFourResult();
-    resultWeek4.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 5";
     count++;
   } else if (count === 5) {
     weekFiveResult();
-    resultWeek5.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 6";
     count++;
   } else if (count === 6) {
     weekSixResult();
-    resultWeek6.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 7";
     count++;
   } else if (count === 7) {
     weekSevenResult();
-    resultWeek7.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 8";
     count++;
   } else if (count === 8) {
     weekEightResult();
-    resultWeek8.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 9";
     count++;
   } else if (count === 9) {
     weekNineResult();
-    resultWeek9.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 10";
     count++;
   } else if (count === 10) {
     weekTenResult();
-    resultWeek10.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 11";
     count++;
   } else if (count === 11) {
     weekElevenResult();
-    resultWeek11.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 12";
     count++;
   } else if (count === 12) {
     weekTwelveResult();
-    resultWeek12.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 13";
     count++;
   } else if (count === 13) {
     weekThirteenResult();
-    resultWeek13.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 14";
     count++;
   } else if (count === 14) {
     weekFourteenResult();
-    resultWeek14.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 15";
     count++;
   } else if (count === 15) {
     weekFifteenResult();
-    resultWeek15.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 16";
     count++;
   } else if (count === 16) {
     weekSixteenResult();
-    resultWeek16.style.display = "block";
+
     playWeekButton.innerHTML = "Click to play Week 17";
     count++;
   } else if (count === 17) {
     weekSeventeenResult();
-    resultWeek17.style.display = "block";
+
     playWeekButton.innerHTML = "Season Over";
     count++;
   } else if (count === 18 && wins >= 9 && wins <= 13) {
-    showRegularSeason.style.display = "none";
     playWeekButton.innerHTML = "Play Wild Card Round!";
     count++;
   } else if (count === 18 && wins > 13) {
-    showRegularSeason.style.display = "none";
     playWeekButton.innerHTML = "Play Divisional Round!";
     count++;
   } else if (wildCardRound) {
     resultWC.style.display = "block";
     wildCardResult();
-  } else if (divisionalRound) {
+  } else if (divisionalRound && count !== 20) {
+    playWeekButton.innerHTML = "Play Divisional Round!";
+    count++;
+  } else if (divisionalRound && count === 20){
     resultDivis.style.display = "block";
     divisionalRoundResult();
   } else if (championshipRound) {
@@ -666,10 +1419,8 @@ function playWeek() {
   }
 }
 
-let showRegularSeason = document.getElementById("text");
-
 function determinePlayoffs() {
-  if (count === 18 && wins < 9) {
+  if (count === 18 && wins < 9 && !endSeason) {
     playWeekButton.style.display = "none";
     startNewSeasonButton.style.display = "block";
     startNewSeasonButton.innerHTML =
@@ -678,17 +1429,24 @@ function determinePlayoffs() {
     endSeason = true;
   } else if (count === 18 && wins >= 9 && wins <= 11 && !wildCardRound) {
     playoffsDiv.style.display = "block";
-    playWeekButton.innerHTML =
-      "You made the playoffs! You are playing on the road in the Wild Card Round! Click to advance!";
     wildCardRound = true;
+    getPlayoffs();
+    playWeekButton.innerHTML =
+      "You made the playoffs! You are playing on the road against the " +
+      wcOpponent.name +
+      " in the Wild Card Round! Click to advance!";
   } else if (count === 18 && wins > 11 && wins <= 13 && !wildCardRound) {
     playoffsDiv.style.display = "block";
     wildCardRound = true;
+    getPlayoffs();
     playWeekButton.innerHTML =
-      "You made the playoffs! You are playing at home in the Wild Card Round! Click to advance!";
+      "You made the playoffs! You are playing at home against the " +
+      wcOpponent.name +
+      " in the Wild Card Round! Click to advance!";
   } else if (count === 18 && wins > 13 && !divisionalRound) {
     playoffsDiv.style.display = "block";
     divisionalRound = true;
+    getPlayoffs();
     playWeekButton.innerHTML =
       "You made the playoffs! You received a bye and will play at home in the Divisional Round! Click to advance!";
   }
@@ -702,6 +1460,7 @@ function resetSeason() {
   count = 1;
   wins = 0;
   losses = 0;
+  genWeek = 1;
   displayWins = "";
   displayLosses = "";
   myTeam2.innerHTML = chosenTeam;
@@ -709,28 +1468,17 @@ function resetSeason() {
   divisionalRound = false;
   championshipRound = false;
   superBowl = false;
-  resultWeek1.style.display = "none";
-  resultWeek2.style.display = "none";
-  resultWeek3.style.display = "none";
-  resultWeek4.style.display = "none";
-  resultWeek5.style.display = "none";
-  resultWeek6.style.display = "none";
-  resultWeek7.style.display = "none";
-  resultWeek8.style.display = "none";
-  resultWeek9.style.display = "none";
-  resultWeek10.style.display = "none";
-  resultWeek11.style.display = "none";
-  resultWeek12.style.display = "none";
-  resultWeek13.style.display = "none";
-  resultWeek14.style.display = "none";
-  resultWeek15.style.display = "none";
-  resultWeek16.style.display = "none";
-  resultWeek17.style.display = "none";
+  while (schedule.firstChild) {
+    schedule.removeChild(schedule.firstChild);
+  }
+
+  scoreButton.style.display = "block";
+
   resultSB.style.display = "none";
   resultConfChamp.style.display = "none";
   resultDivis.style.display = "none";
   resultWC.style.display = "none";
-  showRegularSeason.style.display = "block";
+
   playWeekButton.style.display = "block";
   playWeekButton.innerHTML = "Click to play Week 1";
   startNewSeasonButton.style.display = "none";
@@ -738,7 +1486,9 @@ function resetSeason() {
 
 //////play week button
 let playWeekButton = document.getElementById("playWeek");
+playWeekButton.style.display = "none";
 playWeekButton.innerHTML = "Click to play Week 1";
+
 playWeekButton.addEventListener("click", playWeek);
 playWeekButton.addEventListener("click", determinePlayoffs);
 playWeekButton.addEventListener("click", endGame);
@@ -755,57 +1505,6 @@ startNewSeasonButton.innerHTML = "Start new season";
 ////////////////////////////////
 
 //////week results////////
-
-let resultWeek1 = document.getElementById("resultWeek1");
-resultWeek1.style.display = "none";
-
-let resultWeek2 = document.getElementById("resultWeek2");
-resultWeek2.style.display = "none";
-
-let resultWeek3 = document.getElementById("resultWeek3");
-resultWeek3.style.display = "none";
-
-let resultWeek4 = document.getElementById("resultWeek4");
-resultWeek4.style.display = "none";
-
-let resultWeek5 = document.getElementById("resultWeek5");
-resultWeek5.style.display = "none";
-
-let resultWeek6 = document.getElementById("resultWeek6");
-resultWeek6.style.display = "none";
-
-let resultWeek7 = document.getElementById("resultWeek7");
-resultWeek7.style.display = "none";
-
-let resultWeek8 = document.getElementById("resultWeek8");
-resultWeek8.style.display = "none";
-
-let resultWeek9 = document.getElementById("resultWeek9");
-resultWeek9.style.display = "none";
-
-let resultWeek10 = document.getElementById("resultWeek10");
-resultWeek10.style.display = "none";
-
-let resultWeek11 = document.getElementById("resultWeek11");
-resultWeek11.style.display = "none";
-
-let resultWeek12 = document.getElementById("resultWeek12");
-resultWeek12.style.display = "none";
-
-let resultWeek13 = document.getElementById("resultWeek13");
-resultWeek13.style.display = "none";
-
-let resultWeek14 = document.getElementById("resultWeek14");
-resultWeek14.style.display = "none";
-
-let resultWeek15 = document.getElementById("resultWeek15");
-resultWeek15.style.display = "none";
-
-let resultWeek16 = document.getElementById("resultWeek16");
-resultWeek16.style.display = "none";
-
-let resultWeek17 = document.getElementById("resultWeek17");
-resultWeek3.style.display = "none";
 
 let resultWC = document.getElementById("resultWC");
 resultWC.style.display = "none";
@@ -1038,23 +1737,7 @@ function seeFinalStatsButton() {
     "Divisional Round Losses: " + divisionalRoundLosses;
   wcWinsFinal.innerHTML = "Wild Card Wins: " + wildCardWins;
   wcLossesFinal.innerHTML = "Wild Card Losses: " + wildCardLosses;
-  resultWeek1.style.display = "none";
-  resultWeek2.style.display = "none";
-  resultWeek3.style.display = "none";
-  resultWeek4.style.display = "none";
-  resultWeek5.style.display = "none";
-  resultWeek6.style.display = "none";
-  resultWeek7.style.display = "none";
-  resultWeek8.style.display = "none";
-  resultWeek9.style.display = "none";
-  resultWeek10.style.display = "none";
-  resultWeek11.style.display = "none";
-  resultWeek12.style.display = "none";
-  resultWeek13.style.display = "none";
-  resultWeek14.style.display = "none";
-  resultWeek15.style.display = "none";
-  resultWeek16.style.display = "none";
-  resultWeek17.style.display = "none";
+
   resultSB.style.display = "none";
   resultConfChamp.style.display = "none";
   resultDivis.style.display = "none";
@@ -1091,23 +1774,11 @@ function retire() {
   hideStatsButton.style.dispaly = "none";
   retireButton.style.display = "none";
   playWeekButton.style.display = "none";
-  resultWeek1.style.display = "none";
-  resultWeek2.style.display = "none";
-  resultWeek3.style.display = "none";
-  resultWeek4.style.display = "none";
-  resultWeek5.style.display = "none";
-  resultWeek6.style.display = "none";
-  resultWeek7.style.display = "none";
-  resultWeek8.style.display = "none";
-  resultWeek9.style.display = "none";
-  resultWeek10.style.display = "none";
-  resultWeek11.style.display = "none";
-  resultWeek12.style.display = "none";
-  resultWeek13.style.display = "none";
-  resultWeek14.style.display = "none";
-  resultWeek15.style.display = "none";
-  resultWeek16.style.display = "none";
-  resultWeek17.style.display = "none";
+  genWeek = 1;
+  while (schedule.firstChild) {
+    schedule.removeChild(schedule.firstChild);
+  }
+
   resultSB.style.display = "none";
   resultConfChamp.style.display = "none";
   resultDivis.style.display = "none";
@@ -1170,28 +1841,11 @@ function playNewCareer() {
     historyPage.firstChild.remove();
   }
 
-  resultWeek1.style.display = "none";
-  resultWeek2.style.display = "none";
-  resultWeek3.style.display = "none";
-  resultWeek4.style.display = "none";
-  resultWeek5.style.display = "none";
-  resultWeek6.style.display = "none";
-  resultWeek7.style.display = "none";
-  resultWeek8.style.display = "none";
-  resultWeek9.style.display = "none";
-  resultWeek10.style.display = "none";
-  resultWeek11.style.display = "none";
-  resultWeek12.style.display = "none";
-  resultWeek13.style.display = "none";
-  resultWeek14.style.display = "none";
-  resultWeek15.style.display = "none";
-  resultWeek16.style.display = "none";
-  resultWeek17.style.display = "none";
   resultSB.style.display = "none";
   resultConfChamp.style.display = "none";
   resultDivis.style.display = "none";
   resultWC.style.display = "none";
-  showRegularSeason.style.display = "block";
+
   playWeekButton.style.display = "block";
   playWeekButton.innerHTML = "Click to play Week 1";
   startNewSeasonButton.style.display = "none";

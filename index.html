@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Coin Toss Football</title>
-    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
 
   <!-- ////////intro page////////////// -->
@@ -12,8 +12,12 @@
     <h3>Where every game...is a flip of the coin...</h2>
     <p>Pick your team. Play full seasons and playoffs. How many Super Bowls can you win?</p> 
     <h2>Pick your team to begin</h2>
-
+    
+    <h3 id='myTeam1'></h3>
+      <a id='begin'>Begin Career</a>
     <div id='pickTeam'>
+
+      
       
       <div id='afc'>
       <ul>
@@ -76,8 +80,7 @@
                   </ul>
       </div>
     </div>
-    <h3 id='myTeam1'></h3>
-      <a id='begin'>Begin Career</a>
+    
   </div>
 
 
@@ -114,40 +117,26 @@
    </div>
 
     <div id="season-summary">
+        <a id='scoreTest'>Schedule Release</a>
       <p id="playWeek"></p>
       <p id='restartButton'></p>
+      <div id='playoffs'>
+        <p id='resultSB'></p>
+        <p id='resultConfChamp'></p>
+        <p id='resultDivis'></p>
+        <p id='resultWC'></p>
+      </div>
+      <div id="schedule"></div>
+      
       </div>
 
       
 
 
-      <div id="text">
-          <p id="resultWeek17"></p>
-          <p id="resultWeek16"></p> 
-          <p id="resultWeek15"></p> 
-          <p id="resultWeek14"></p>
-          <p id="resultWeek13"></p>
-          <p id="resultWeek12"></p>
-          <p id="resultWeek11"></p> 
-          <p id="resultWeek10"></p>
-          <p id="resultWeek9"></p>
-          <p id="resultWeek8"></p>
-          <p id="resultWeek7"></p>
-          <p id="resultWeek6"></p> 
-          <p id="resultWeek5"></p>
-          <p id="resultWeek4"></p>
-          <p id="resultWeek3"></p>
-          <p id="resultWeek2"></p>
-          <p id="resultWeek1"></p>
-        </div>
+      
         
         
-        <div id='playoffs'>
-          <p id='resultSB'>Super Bowl</p>
-          <p id='resultConfChamp'>Conference Championship</p>
-          <p id='resultDivis'>Divisional Round</p>
-          <p id='resultWC'>Wild Card Round</p>
-        </div>
+        
       
         <div id='historyPage'>
           
@@ -188,6 +177,15 @@
 <br>
 <a id='contactPage' href='/src/contact.html'>Click for contact page</a>
 
-    <script src="/src/index.js" defer></script>
+    <script src="src/index.js" defer></script>
+<div id='playoffs'>
+    <h3>Playoffs</h3>
+      <h5>AFC</h5>
+      <p>1 Seed</p><
+        <p>6 Seed</p>
+
+</div>
   </body>
 </html>
+
+
